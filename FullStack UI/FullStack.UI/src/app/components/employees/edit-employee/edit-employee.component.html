@@ -1,0 +1,43 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Contatado</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updateEmployee()">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" readonly
+                    name="id" [(ngModel)]="employeeDetails.id">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="name"
+                    name="name" [(ngModel)]="employeeDetails.nome">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email"
+                    name="email" [(ngModel)]="employeeDetails.email">
+                </div>
+                <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="number" class="form-control" id="telefone"
+                    name="telefone" [(ngModel)]="employeeDetails.telefone">
+                </div>
+                <div class="mb-3">
+                    <label for="salario" class="form-label">Salario</label>
+                    <input type="number" class="form-control" id="salario"
+                    name="salario" [(ngModel)]="employeeDetails.salario">
+                </div>
+                <div class="mb-3">
+                    <label for="departamento" class="form-label">Departamento</label>
+                    <input type="text" class="form-control" id="departamento"
+                    name="departamento" [(ngModel)]="employeeDetails.departamento">
+                </div>
+                <button type="submit" class="btn btn-primary mr-5">Save</button>
+                <button type="button" class="btn btn-danger" (click)="deleteEmployee(employeeDetails.id)" >Delete</button>
+            </form>
+        </div>
+    </div>
+
+</div>
